@@ -1,0 +1,63 @@
+<html>
+	<title>Forums</title>
+	<link type="text/css" rel="stylesheet" href="forums.css"/>
+    <link type="image/x-icon" rel="icon" href="favicon.ico"/>
+	<script type="text/javascript" src="jquery-1.11.2.js"></script>
+	<body>
+        <script>
+            $(document).ready(function(){
+                              $('#headerdiv').hover(function() {
+                                                    $('.submenu').fadeTo(750, 1);
+                                                    $('.blur').fadeTo(250, 0.8);
+                                                    }, function() {
+                                                    $('.submenu').fadeTo(50, 0);
+                                                    $('.blur').fadeTo(50, 0);
+                                                    });
+                              });
+            </script>
+        <div id="headerdiv">
+            <div class="menu" onclick="location.href='homepage.html';">
+                <img src="header/home.png"/>
+                <p class="submenu">Home</p>
+                <!--<p class="submenu">Go back to the homepage.</p>-->
+            </div>
+            <div class="menu" onclick="location.href='forums.html';">
+                <img src="header/forums.png"/>
+                <p class="submenu">Forum</p>
+                <!--<p class="submenu">Discuss stocks at the forums!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='usefullinks.html';">
+                <img src="header/links.png"/>
+                <p class="submenu">Useful links</p>
+                <!--<p class="submenu">Use these links to invest the best!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='powerpoints.html';">
+                <img src="header/ppoints.png"/>
+                <p class="submenu">Powerpoints</p>
+                <!--<p class="submenu">Catch up on the powerpoints!</p>-->
+            </div>
+        </div>
+        <div class="blur">
+        </div>
+        <div id="contentdiv">
+            <div class="upper">
+                <h1>Forums</h1>
+                <p style="position:relative;display:block;margin-left:30%;">Here's the best place to discuss companies that are in needing of investing: the forums!</p>
+            </div>
+            <script>
+                $(document).ready(function() {
+                                  $(window).scroll(function() {
+                                                   $('.upper').css("background-size", "auto "+ (1500 - ($(window).scrollTop()) +"px"));
+                                                   });
+                                  });
+                </script>
+		<div id="sorry">Forum coming soon!</div>
+        </div>
+	</body>
+</html>
+
+
+
+
+
+

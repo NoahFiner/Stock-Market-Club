@@ -1,0 +1,152 @@
+<html>
+	<head>
+	<title>FHS Stock Market Club</title>
+	<link type="text/css" rel="stylesheet" href="forums.css"/>
+    <link type="image/x-icon" rel="icon" href="favicon.ico"/>
+    <script src="jquery-1.11.2.js"></script>
+	</head>
+
+	<body>
+        <script>
+            $(document).ready(function(){
+                              $('#headerdiv').hover(function() {
+                                                    $('.submenu').fadeTo(750, 1);
+                                                    $('.blur').fadeTo(250, 0.8);
+                                                    }, function() {
+                                                    $('.submenu').fadeTo(50, 0);
+                                                    $('.blur').fadeTo(50, 0);
+                                                    });
+                              });
+        </script>
+        <div id="headerdiv">
+            <div class="menu" onclick="location.href='homepage.html';">
+                <img src="header/home.png"/>
+                <p class="submenu">Home</p>
+                <!--<p class="submenu">Go back to the homepage.</p>-->
+            </div>
+            <div class="menu" onclick="location.href='forums.html';">
+                <img src="header/forums.png"/>
+                <p class="submenu">Forum</p>
+                <!--<p class="submenu">Discuss stocks at the forums!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='usefullinks.html';">
+                <img src="header/links.png"/>
+                <p class="submenu">Useful links</p>
+                <!--<p class="submenu">Use these links to invest the best!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='powerpoints.html';">
+                <img src="header/ppoints.png"/>
+                <p class="submenu">Powerpoints</p>
+                <!--<p class="submenu">Catch up on the powerpoints!</p>-->
+            </div>
+        </div>
+        <div class="blur">
+        </div>
+        <div id="contentdiv">
+            <!--<img src="background.png" id="background"/>-->
+            <div id="intro-outer">
+                <div id="intro-background-anim">
+                </div>
+                <div id="intro-content">
+                <h1 style="font-size:100px;margin-top:300px;">
+                Welcome to the FHS Stock Market Club!
+                </h1>
+                </div>
+            </div>
+            <div id="presi">
+                <p>Welcome to official website of the Fairview High School Stock Market Club. We meet every block Thursday in room 201. We will give you an incredible inventory of information for you to use to start or improve your investing. We will teach you about investment styles, how the markets work, and much more. All skill levels are welcome, so please join!</p>
+            </div>
+            <div id="stockpick">
+                <div id="stockpick-left">
+                    <h4 id="stockpick-header-main">Random Recommended (by Noah) Stock</h4>
+                    <h2 id="stockpick-ticker">ABAB</h2>
+                    <p id="stockpick-desc">This text should change immediately.</p>
+                    <form>
+                        <input type="text" name="tickerinput" id="tickerinput" placeholder="Enter a ticker..."></input>
+                    </form>
+                    <button class="stockpickbutt" onclick="submitTicker()">Submit</button>
+                    </div>
+                <div id="stockpick-right">
+                    <div id="stockpick-right-upper">
+                        <button class="stockpickbutt" id="stockpickbutt1" onclick="stock.months = 1; stock.display();">1 Month</button>
+                        <button class="stockpickbutt" id="stockpickbutt3" onclick="stock.months = 3; stock.display();">3 Months</button>
+                        <button class="stockpickbutt" id="stockpickbutt6" onclick="stock.months = 6; stock.display();">6 Months</button>
+                        <button class="stockpickbutt" id="stockpickbutt12" onclick="stock.months = 12; stock.display();">1 Year</button>
+                        <button class="stockpickbutt" id="stockpickbutt24" onclick="stock.months = 24; stock.display();">2 Years</button>
+                        <button class="stockpickbutt" id="stockpickbutt60" onclick="stock.months = 60; stock.display();">5 Years</button>
+                    </div>
+                        <a id="stockpick-a" href="http://finance.yahoo.com/q?s=kr&fr=uh3_finance_web&uhb=uhb2"><img id="stockpick-img" src="http://chart.finance.yahoo.com/z?s=KR&t=6m&q=l&l=on&z=s&p=m50,m200"/></a>
+
+                    </div>
+            </div>
+            <hr>
+            <script>
+                var Stock = function(ticker, description) {
+                    this.tick = ticker;
+                    this.desc = description;
+                    this.months = 6;
+                    this.years = this.months/2
+                    this.display = function() {
+                        $('#stockpick-a').attr("href", "http://finance.yahoo.com/q?s="+this.tick+"&fr=uh3_finance_web&uhb=uhb2");
+                        $('#stockpick-img').attr("src", "http://chart.finance.yahoo.com/z?s="+this.tick+"&t="+this.months+"m&q=l&l=on&z=s&p=m50,m200");
+                        if(this.months >= 12) {
+                            this.years = this.months/12;
+                            $('#stockpick-img').attr("src", "http://chart.finance.yahoo.com/z?s="+this.tick+"&t="+this.years+"y&q=l&l=on&z=s&p=m50,m200");
+                        }
+                        $('.stockpickbutt').css("background-color", "#5CA589");
+                        $('#stockpickbutt'+this.months).css("background-color", "#0099FF");
+                        $('#stockpick-ticker').html(this.tick);
+                        $('#stockpick-desc').html(this.desc);
+                    }
+                }
+            var submitTicker = function() {
+                if($('input[name=tickerinput]') != ''){
+                    stock.tick = ($('input[name=tickerinput]').val()).toUpperCase();
+                    stock.desc = ('The '+stock.tick+' ticker is displayed on a chart next to the left. For a more detailed analysis, click on the chart to head to its Yahoo! Finance page.');
+                    $('#stockpick-img').toggleClass("cooler");
+                    setTimeout(function() {stock.display(); $('#stockpick-header-main').html('Quick Ticker Lookup')}, 200);
+                    setTimeout(function() {$('#stockpick-img').toggleClass("cooler")}, 400);
+                }
+            }
+            data = [["AAPL", "Apple is a technology giant known for their revolutionary iPhone and multiple other products. They have the number one biggest market cap."], ["KR", "Kroger is the number one grocery store chain in the world and is receiving insane growth."], ["CVS", "CVS Pharmacy is gigantic at the moment and has great growth potential, that of which was shown throughout most of last year."], ["COST","Costco is a major retail chain with vast amounts of locations and an ever-growing amount of customers!"], ["CMCSA", "Comcast Corp. is actually an incredibly safe stock. It has had non-stop growth over the past few years. Though it might not be doubling every month, it's still incredible growth."]];
+            var stockamt = data.length;
+            var randchoice = Math.floor(Math.random()*stockamt);
+            var stock = new Stock(data[randchoice][0], data[randchoice][1]);
+            stock.display();
+            </script>
+            <!--<div id="popup"><a href="competition.html">Click Here to Enter our Competition</a>
+            </div>-->
+            <div id="wss-section-outer">
+                <h2 id="wss-header">Competition</h2>
+                <div id="wss-right">
+                    <p>Stock Market Club is competing in an intense competition on tradermob.com with paper money. The contest is to end at the end of the semester and the person with the most return wins prizes!</p>
+                    <h6>How to Join</h6>
+                    <p style="text-align:left"><b>1.</b> Make an account on <a href="http://tradermob.com">Tradermob</a></p>
+                    <p style="text-align:left"><b>2.</b> Click on the contests link on the left and click the "Mobbers" tag</p>
+                    <p style="text-align:left"><b>3.</b> Search for the Fairview High School competition and request a join.</p>
+                    <p style="text-align:left"><b>4.</b> After being approved, start trading! Good luck!</p>
+                </div>
+                <div id="wss-left">
+                <iframe id="standings"></iframe>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+                              //introAnimHeight = $('#intro-background-anim').height();
+                              //introAnimWidth = $('#intro-background-anim').width();
+                              $('#intro-background-anim').animate({width:"0%",marginLeft:"100%"}, 2000);
+                              setTimeout(function() {$('#intro-background-anim').remove();$('#intro-content').fadeTo(2000, 1);}, 2000);
+                              var poopy2 = setTimeout(function() {$("html, body").animate({scrollTop:690}, 1000);$('#standings').attr("src", "http://www.tradermob.com");}, 5000);
+                              var scrolledbro = false;
+                              $(window).scroll(function() {
+                                               if(!scrolledbro) {
+                                               scrolledbro = true;
+                                                   clearTimeout(poopy2);
+                                                   $('#standings').attr("src", "http://www.tradermob.com");
+                                               }
+                                               });
+                              });
+     </script>
+	</body>
+</html>

@@ -1,0 +1,164 @@
+<html>
+	<title>Useful Links</title>
+    <link type="text/css" rel="stylesheet" href="forums.css"/>
+    <link type="image/x-icon" rel="icon" href="favicon.ico"/>
+	<script type="text/javascript" src="jquery-1.11.2.js"></script>
+	<body>
+        <script>
+            var ids = ["#wss-div", "#finviz-div", "#investo-div", "#yfin-div", "#gfin-div", "#stwits-div"];
+            var fadeAll = function() {
+                for(i = 0; i < ids.length; i++) {
+                    $(ids[i]).fadeTo(10, 0);
+                    $(ids[i]).css("pointer-events", "none");
+                }
+            };
+        var yo;
+            $(document).ready(function(){
+                              $('#useful-left').addClass('hovered');
+                              $('#useful-left').mouseenter(function() {
+                                                           $(this).removeClass('hovered');
+                                                           });
+                              $('a').hover(function() {
+                                           clearTimeout(yo);
+                                                $("html, body").animate({scrollTop:350}, 1000);
+                                           }, function() {
+                                           yo = setTimeout(function() {$("html, body").stop();}, 1000);
+                                           });
+                              $('#headerdiv').hover(function() {
+                                                    $('.submenu').fadeTo(750, 1);
+                                                    $('.blur').fadeTo(250, 0.8);
+                                                    }, function() {
+                                                    $('.submenu').fadeTo(50, 0);
+                                                    $('.blur').fadeTo(50, 0);
+                                                    });
+
+                              $('#wss-link').mouseenter(function() {
+                                                        fadeAll();
+                                                        $('#wss-div').fadeTo(250, 1)
+                                                        $('#wss-div').css("pointer-events", "auto");
+                                                        });
+                              $('#finviz-link').mouseenter(function() {
+                                                           fadeAll();
+                                                           $('#finviz-div').fadeTo(250, 1);
+                                                  $('#finviz-div').css("pointer-events", "auto");
+                                                           });
+                              $('#investo-link').mouseenter(function() {
+                                                            fadeAll();
+                                                            $('#investo-div').fadeTo(250, 1);                                             $('#investo-div').css("pointer-events", "auto");
+                                                            });
+                              $('#yfin-link').mouseenter(function() {
+                                                         fadeAll();
+                                                         $('#yfin-div').fadeTo(250, 1);                                                        $('#yfin-div').css("pointer-events", "auto");
+                                                         });
+                              $('#gfin-link').mouseenter(function() {
+                                                         fadeAll();                                                        $('#gfin-div').css("pointer-events", "auto");
+                                                         $('#gfin-div').fadeTo(250, 1);
+                                                         });
+															$('#stwits-link').mouseenter(function() {
+																fadeAll();
+																$('#stwits-div').fadeTo(250, 1);
+															})
+                              //$('body').click(function() {
+                              //                alert($(window).scrollTop());
+                              //                  });
+                              });
+            </script>
+        <div id="headerdiv">
+            <div class="menu" onclick="location.href='homepage.html';">
+                <img src="header/home.png"/>
+                <p class="submenu">Home</p>
+                <!--<p class="submenu">Go back to the homepage.</p>-->
+            </div>
+            <div class="menu" onclick="location.href='forums.html';">
+                <img src="header/forums.png"/>
+                <p class="submenu">Forum</p>
+                <!--<p class="submenu">Discuss stocks at the forums!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='usefullinks.html';">
+                <img src="header/links.png"/>
+                <p class="submenu">Useful links</p>
+                <!--<p class="submenu">Use these links to invest the best!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='powerpoints.html';">
+                <img src="header/ppoints.png"/>
+                <p class="submenu">Powerpoints</p>
+                <!--<p class="submenu">Catch up on the powerpoints!</p>-->
+            </div>
+        </div>
+        <div class="blur">
+        </div>
+    <div id="contentdiv" class="usefullinks">
+        <div class="upper">
+            <h1>Useful Links</h1>
+            <p>You can't just invest on your own simple knowledge. Below are some incredible resources that even the proffesionals use!</p>
+        </div>
+        <script>
+            $(document).ready(function() {
+                              $(window).scroll(function() {
+                                               $('.upper').css("background-size", "auto "+ (1500 - ($(window).scrollTop()) +"px"));
+                                               });
+                              });
+            </script>
+
+        <div id="useful-left">
+            <ul>
+                <li><a id="wss-link" href="http://tradermob.com">Tradermob</a></li>
+                <li><a id="finviz-link" href="http://finviz.com">FINVIZ</a></li>
+                <li><a id="investo-link" href="http://investopedia.com">Investopedia</a></li>
+                <li><a id="yfin-link" href="http://finance.yahoo.com">Yahoo Finance</a></li>
+                <li><a id="gfin-link" href="http://google.com/finance">Google Finance</a></li>
+								<li><a id="stwits-link" href="http://stocktwits.com"><img src="stwits.png"/></a></li>
+            </ul>
+        </div>
+        <div id="useful-right">
+            <div id="wss-div">
+                <h5>Tradermob</h5>
+                <p>Tradermob is the location of our <a href="homepage.html">stock competition!</a>Along with real-time portfolio trackers and competitions are plenty of incredibly useful tutorials and lessons, along with forums.</p>
+                <iframe src="http://www.tradermob.com"></iframe>
+            </div>
+            <div id="finviz-div">
+                <h5>FINVIZ</h5>
+                <p>FINVIZ is the absolute best stock screener out there. You can look up a bunch of tickers and get insane amounts of data and compare the stocks in indexes!<p>
+                <a href="http://finviz.com"><img src="http://finviz.com/publish/040615/sec_214291568.png"/></a>
+            </div>
+            <div id="investo-div">
+                <h5>Investopedia</h5>
+                <p>Investopedia is yet another wallstreetsurvivor. It too has an incredible amount of stock resources that literally anyone can understand and learn from. They even have their own portfolio trackers and competitions!</p>
+            </div>
+            <div id="yfin-div">
+                <h5>Yahoo Finance</h5>
+                <p>Yahoo Finance has interactive charts, news, real-time quotes, embeddable resources, historical prices, crazy amounts of data, and so much more. It is the absolute most dependable resource for getting any stock information out there.</p>
+                <iframe id="stupid-yfin" style="margin-left:50%;height:200%;" src="http://badge.finance.yahoo.com/instrument/1.0/YHOO/badge;chart=1y;quote/HTML?AppID=NLm0gWBWJmVDlWLSZAr4wwqxKzw-&sig=ru3oE8rPj5Z.QFwB.oNVGGt33xU-&t=1428364372811"></iframe>
+
+            </div>
+            <div id="gfin-div">
+                <h5>Google Finance</h5>
+                <p>Google Finance is an excellent alternative to Yahoo Finance. Along with an incredible, simple look, tons of data is very easy to access everywhere in it.</p>
+                <img src="https://www.google.com/finance/getchart?q=GOOGL&p=1Y&i=86400"/>
+            </div>
+						<div id="stwits-div">
+								<h5>Stocktwits</h5>
+								<p>Stocktwits is the best way to find out what stocks people are talking about, along with finding some not-so-smart investors</p>
+								<!-- <div id="stocktwits">
+									<div id="s-left">
+										<img class="twit" src="twits/t1.png"/>
+										<img class="twit" src="twits/t2.png"/>
+										<img class="twit" src="twits/t5.png"/>
+										<img class="twit" src="twits/t7.png"/>
+										<img class="twit" src="twits/t8.png"/>
+										<img class="twit" src="twits/t9.png"/>
+									</div>
+									<div id="s-right">
+										<img class="twit" src="twits/t3.png"/>
+										<img class="twit" src="twits/t4.png"/>
+										<img class="twit" src="twits/t6.png"/>
+										<img class="twit" src="twits/t10.png"/>
+										<img class="twit" src="twits/t11.png"/>
+										<img class="twit" src="twits/t12.png"/>
+									</div>
+							</div> -->
+					</div>
+        </div>
+    </div>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+<html>
+		<head>
+	<title>Presentations</title>
+	<link type="text/css" rel="stylesheet" href="forums.css"/>
+    <link type="image/x-icon" rel="icon" href="favicon.ico"/>
+	<script type="text/javascript" src="jquery-1.11.2.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+	});
+	</script>
+	</head>
+	<body>
+        <script>
+            $(document).ready(function(){
+                              $('#headerdiv').hover(function() {
+                                                    $('.submenu').fadeTo(750, 1);
+                                                    $('.blur').fadeTo(250, 0.8);
+                                                    }, function() {
+                                                    $('.submenu').fadeTo(50, 0);
+                                                    $('.blur').fadeTo(50, 0);
+                                                    });
+                              $('.powerpoint').hover(function() {
+                                                $('.powerpoint-desc').toggleClass("dostuff");
+                                                }, function() {
+                                                $('.powerpoint-desc').toggleClass("dostuff");
+                                                });
+                              });
+            </script>
+        <div id="headerdiv">
+            <div class="menu" onclick="location.href='homepage.html';">
+                <img src="header/home.png"/>
+                <p class="submenu">Home</p>
+                <!--<p class="submenu">Go back to the homepage.</p>-->
+            </div>
+            <div class="menu" onclick="location.href='forums.html';">
+                <img src="header/forums.png"/>
+                <p class="submenu">Forum</p>
+                <!--<p class="submenu">Discuss stocks at the forums!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='usefullinks.html';">
+                <img src="header/links.png"/>
+                <p class="submenu">Useful links</p>
+                <!--<p class="submenu">Use these links to invest the best!</p>-->
+            </div>
+            <div class="menu" onclick="location.href='powerpoints.html';">
+                <img src="header/ppoints.png"/>
+                <p class="submenu">Powerpoints</p>
+                <!--<p class="submenu">Catch up on the powerpoints!</p>-->
+            </div>
+        </div>
+        <div class="blur">
+        </div>
+        <div id="contentdiv" class="ppoint-content">
+            <div class="upper">
+                <h1>Presentations</h1>
+                <p>Below are all of the previous stock market club presentations in no particular order. Company pitches are at the bottom.
+                </p>
+            </div>
+            <script>
+                $(document).ready(function() {
+                                  $(window).scroll(function() {
+                                                   $('.upper').css("background-size", "auto "+ (1500 - ($(window).scrollTop()) +"px"));
+                                                   });
+                                  });
+            </script>
+			<div id="present">
+						<div class="week-div" id="week9" style="background-color:#FFFF33">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>Stock Market Mechanics</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1kjr-rvCs45lX_7bB4WcY6yC-5-aQTqfX2mdSdnun9sY&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">In this presentation are quick things to keep in mind when playing the markets.</p>
+								</div>
+						</div>
+						<div class="week-div" id="week8" style="background-color:#FF3333">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>Options</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1nsj7hpZ72bBI6JxI4HLlXeuViRqTmVT3kvJ1MKLBOI8&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation discusses how options work, what their derivatives mean, and how you can profit from them.</p>
+								</div>
+						</div>
+						<div class="week-div" id="week7" style="background-color:#999933">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>Everything You Need to Know About Stock Picking</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1bvVfmrArLXEXMoPVQ4O1qfGSoUn5SypLenK6itAR53c&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation covers the basics of what must be known to pick the best stocks, diversify, and create a great portfolio.</p>
+								</div>
+						</div>
+						<div class="week-div" id="week6" style="background-color:#9933FF">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>Momentum and Swing Trading</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1WjMqvMPvGvK_h--QvBu0SYPrHKLN6ygF7xZmRmv8Qvk&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">How does going with the flow affect the stock's price? See in this presentation!</p>
+								</div>
+						</div>
+						<div class="week-div" id="week5" style="background-color:#99FF33">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>The Fed and Interest Rates</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1j4fkuoW6ooWD-MaihvLS0azJyutefZJONVl8B_9YFlE&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation covers how the Fed either raising or lowering interest rates creates havoc in the market.</p>
+								</div>
+						</div>
+						<div class="week-div" id="week4" style="background-color:#FF9933">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+										<h1>Contrarian Investing and Intro to Options</h1>
+										<iframe class="powerpoint" src="https://docs.google.com/presentation/d/1KUPQ6K2Z_h0pzJMpL2OnLFCvkj348IftYyR2rHihLt0/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation covers the some most important themes of investing: contrarian investing and options. It is essential to look over if you missed the meeting!</p>
+								</div>
+						</div>
+            <div class="week-div" id="week2">
+                <img src="powerpoint-back.png" class="ppoint-back"/>
+                <div>
+            <h1>
+                Security Analysis Essentials
+            </h1>
+            <iframe class='powerpoint' src="https://docs.google.com/presentation/d/1-CvTdAT-ZS7vdQprFpnujCPckE1Dpn4BBMup-NGVBv8/embed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+            <p class="powerpoint-desc">This presentation was in an introduction to analyzing a stock to see if it's fairly valued, overvalued, or undervalued.</p>
+            </div>
+                </div>
+            <div class="week-div" id="week1">
+                <img src="powerpoint-back.png" class="ppoint-back"/>
+                <div>
+                <h1>
+                    Intro to Markets
+                </h1>
+                <iframe class="powerpoint" src="https://docs.google.com/presentation/d/1TM2xf8zYp18BJ1EehW0AxdQR9FZ2k8dy7KmkRrBAQcE/embed?start=false&loop=false&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                <p class="powerpoint-desc">The first presentation from 2015 was the introduction to stocks, how to invest, and the beginner's guide to investing.</p>
+                </div>
+            </div>
+						<div class="week-div" id="week3">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+								<h1>Kroger</h1>
+								<iframe class='powerpoint' src="https://docs.google.com/presentation/d/1ovde5hSZZ5g5hUf5Shj7ivQLDjf3ToZgGhNtnb2j_kU/embed?start=true&loop=false&delayms=30000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">Noah presented about why the group portfolio should invest in Kroger (KR). In the end, $9,000 of the $100,000 was decided to put into it.</p>
+								</div>
+						</div>
+						<div class="week-div" style="background-color:#33FF33">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+								<h1>Chipotle</h1>
+								<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=13i_zvyx4bqVsK8iGYzPq387gPoAqcwzwxGSj4hwsGcc&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation discussed why the group portfolio should invest in Chipotle (CMG).</p>
+								</div>
+						</div>
+						<div class="week-div" style="background-color:#339933">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+								<h1>Why VIX Is Free Money</h1>
+								<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1ymTFTVCz1CDrY_iK2a2eh5WOoWgWwvEuD9FEHAKbpA4&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">VIXShorterMan presents on why everyone should just be shorting VIX related stocks right now.</p>
+								</div>
+						</div>
+						<div class="week-div" style="background-color:#FF99FF">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+								<h1>Activision Blizzard</h1>
+								<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1J-csDflbNWV7XcxVOhwI_neIkbGVnNtFcfa3UXtFB5M&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">This presentation covered Activision Blizzard's advantages and disadvantages.</p>
+								</div>
+						</div>
+						<div class="week-div" style="background-color:#339999">
+								<img src="powerpoint-back.png" class="ppoint-back"/>
+								<div>
+								<h1>Lululemon</h1>
+								<iframe class="powerpoint" src="https://docs.google.com/presentation/embed?id=1vgLSvaQ6GJavqHPjnwTHYoko5TDBVXE9c7fFK6Wrrhg&start=false&loop=false&frameborder='0'" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+										<p class="powerpoint-desc">Xavier discusses why Lululemon might be a great pick.</p>
+								</div>
+						</div>
+        </div>
+		</div>
+        </div>
+	</body>
+</html>
